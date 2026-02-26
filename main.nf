@@ -440,7 +440,7 @@ if (!params.star_index) {
                 --genomeDir STAR_${fasta.baseName} \\
                 --genomeFastaFiles $fasta \\
                 --genomeSAindexNbases \$NUM_BASES \\
-                --sjdbGTFfile $gtf
+                --sjdbGTFfile $gtf \\
 				--limitGenomeGenerateRAM ${task.memory.toBytes() - 2000000000}
             """
         }
