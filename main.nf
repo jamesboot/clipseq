@@ -441,6 +441,7 @@ if (!params.star_index) {
                 --genomeFastaFiles $fasta \\
                 --genomeSAindexNbases \$NUM_BASES \\
                 --sjdbGTFfile $gtf
+				--limitGenomeGenerateRAM ${task.memory.toBytes() - 2000000000}
             """
         }
     } else if (!params.gtf) {
